@@ -27,3 +27,15 @@
         }
     ]
 }
+{
+    "quizzes": [
+        "quizId": 1,
+        "quizName": "JavaScript",
+        "passingScore": 0.8,
+        "questions": [
+            {
+                "questionNumber": 1
+            }
+        ]
+    ]
+}
