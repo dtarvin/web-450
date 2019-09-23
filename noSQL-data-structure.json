@@ -1,0 +1,29 @@
+{
+    "employees": [
+        {
+            "employeeId": "a100",
+            "firstName": "Joshua",
+            "lastName": "Jericho",
+            "quizzesTaken": [
+                {
+                    "quizId": 1,
+                    "quizName": "Javascript",
+                    "quizScore": 0.9,
+                    "pass": true,
+                    "employeeAnswers": [
+                        {
+                            "questionNumber": 1,
+                            "answerGiven": "a",
+                            "correctAnswer": "b"
+                        },
+                        {
+                            "questionNumber": 2,
+                            "answerGiven": "c",
+                            "correctAnswer": "c"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
