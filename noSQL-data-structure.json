@@ -1,41 +1,67 @@
+[{
+    "user": {
+        "employeeId": "a1610",
+        "employeeName": "David Tarvin",
+        "runningAverage": 0.8,
+        "quiz": {
+            "quizId": "JS",
+            "quizName":"JavaScript",
+            "scoreToPass": 0.8,
+            "result": {
+                "dateCompleted": "09/18/2019",
+                "quizScore": 0.9,
+                "didPass": true,
+                "answersGiven": [
+                    "JS01a", "JS02c", "JS03b", "JS04b", "JS05d",
+                    "JS06c", "JS07a", "JS08d", "JS09b", "JS10c"
+                ]
+            }
+        }
+    }
+},
 {
-    "employees": [
-        {
-            "employeeId": "a100",
-            "firstName": "Joshua",
-            "lastName": "Jericho",
-            "quizzesTaken": [
+    "quiz": {
+        "quizId": "JS",
+        "quizName":"JavaScript",
+        "scoreToPass":0.8,
+        "question": {
+            "questionId": "JS01",
+            "questionText": "Which term is not used in a loop?",
+            "answer": [
                 {
-                    "quizId": 1,
-                    "quizName": "Javascript",
-                    "quizScore": 0.9,
-                    "pass": true,
-                    "employeeAnswers": [
-                        {
-                            "questionNumber": 1,
-                            "answerGiven": "a",
-                            "correctAnswer": "b"
-                        },
-                        {
-                            "questionNumber": 2,
-                            "answerGiven": "c",
-                            "correctAnswer": "c"
-                        }
-                    ]
+                    "answerId": "JS01a",
+                    "answerText": "for",
+                    "isCorrectAnswer": false
+                },
+                {
+                    "answerId": "JS01b",
+                    "answerText": "do while",
+                    "isCorrectAnswer": false
+                },
+                {
+                    "answerId": "JS01c",
+                    "answerText": "if",
+                    "isCorrectAnswer": true
+                },
+                {
+                    "answerId": "JS01d",
+                    "answerText": "while",
+                    "isCorrectAnswer": false
                 }
             ]
         }
-    ]
-}
+    }
+},
 {
-    "quizzes": [
-        "quizId": 1,
-        "quizName": "JavaScript",
-        "passingScore": 0.8,
-        "questions": [
-            {
-                "questionNumber": 1
-            }
+    "result": {
+        "quizId": "JS",
+        "employeeId": "a1610",
+        "dateCompleted": "09/18/2019",
+        "quizScore": 0.9,
+        "didPass": true,
+        "answersGiven": [
+            "JS01a", "JS02c", "JS03b", "JS04b", "JS05d",
+            "JS06c", "JS07a", "JS08d", "JS09b", "JS10c"
         ]
-    ]
-}
+    }
+}]
