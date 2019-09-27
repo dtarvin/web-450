@@ -1,3 +1,12 @@
+/*
+; ============================================
+; Title:  config.js
+; Author: David Tarvin
+; Date:   26 Sep 2019
+; Description: NodeQuiz
+;=============================================
+*/
+
 let config = {};
 
 /**

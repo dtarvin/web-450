@@ -1,3 +1,13 @@
+/*
+; ============================================
+; Title:  app.module.ts
+; Author: Richard Krasso
+; Modified By: David Tarvin
+; Date:   26 Sep 2019
+; Description: NodeQuiz
+;=============================================
+*/
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

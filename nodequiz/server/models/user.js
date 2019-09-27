@@ -1,3 +1,12 @@
+/*
+; ============================================
+; Title:  user.js
+; Author: David Tarvin
+; Date:   26 Sep 2019
+; Description: NodeQuiz
+;=============================================
+*/
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
