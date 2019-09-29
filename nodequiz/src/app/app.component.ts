@@ -9,6 +9,9 @@
 */
 
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
+import { AuthGuard } from './shared/guards/auth.guard';
 
 @Component({
   selector: 'app-root',
@@ -16,4 +19,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Node Quiz';
+
+  constructor(private router: Router, private cookieService: CookieService, private authGuard: AuthGuard) {
+    let test = this.cookieService.get("isAuthenticated");
+    console.log(test);
+    if (!test) {
+      router.navigate(["/session/login"]);
+    }
+  }
 }
