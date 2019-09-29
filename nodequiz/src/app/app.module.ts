@@ -13,6 +13,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule} from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppRoutes } from './app.routing';
@@ -61,7 +62,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatInputModule,
     MatIconModule,
     MatMenuModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},
               AuthGuard, CookieService],
