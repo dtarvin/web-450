@@ -1,12 +1,12 @@
 .id-card {
   background-color: #649568;
-  
 }
 
 mat-card-title {
   text-align: center;
   font-family: 'Righteous', cursive;
 }
+
 .login-card {
   background-color: #9ccc9c;
 }
