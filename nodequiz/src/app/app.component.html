@@ -10,7 +10,7 @@
     <button mat-button class="mat-button">
       Contact Us
     </button>
-    <button (click)="logout()" mat-button class="mat-button">
+    <button *ngIf="!isAuthenticated" (click)="logout()" mat-button class="mat-button">
       Logout
     </button>
 
@@ -36,7 +36,35 @@
     </mat-menu> -->
   </mat-toolbar-row>
 </mat-toolbar>
-<div>
 
-</div>
-<router-outlet></router-outlet>
+<!-- <mat-sidenav-container class="all-wrap">
+  <mat-sidenav>
+    <mat-list>
+      <mat-list-item></mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="page-wrap">
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <span>
+          <mat-icon>
+            menu
+          </mat-icon>
+        </span>
+        <span><h1>Toolbar</h1></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <main class="content"> -->
+      <router-outlet></router-outlet>
+    <!-- </main> -->
+    <footer>
+      <mat-toolbar>
+          <small><p>Powered by MongoDB, Express, Angular, and Node.js<br/>© 2019 Copyright:
+            Tarvin Labs</p></small>
+      </mat-toolbar>
+      
+    </footer>
+  <!-- </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+

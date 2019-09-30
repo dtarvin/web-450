@@ -1,12 +1,14 @@
 .id-card {
-  background-color: #9ccc9c;
+  background-color: #649568;
+  
 }
 
 mat-card-title {
   text-align: center;
+  font-family: 'Righteous', cursive;
 }
 .login-card {
-  background-color: #649568;
+  background-color: #9ccc9c;
 }
 
 mat-card {
@@ -16,5 +18,9 @@ mat-card {
 .submitButton {
   background-color: #2b5329;
   color: white;
+  width: 100px;
+}
+mat-card-actions {
   width: 30%;
+  margin: auto;
 }
