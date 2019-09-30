@@ -25,6 +25,13 @@ export class AppComponent {
     console.log(test);
     if (!test) {
       router.navigate(["/session/login"]);
+    } else {
+      router.navigate(['/dashboard']);
     }
   }
-}
+  logout() {
+    console.log("clicked logout");
+    this.cookieService.delete("isAuthenticated");
+    this.router.navigate(['/session/login']);
+  }
+ }
