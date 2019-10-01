@@ -39,6 +39,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { PresentationComponent } from './pages/presentation/presentation.component';
 
 
 
@@ -50,7 +51,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     DashboardComponent,
     LoginComponent,
     NotFoundComponent,
-    AuthLayoutComponent
+    AuthLayoutComponent,
+    PresentationComponent
   ],
   imports: [
     BrowserModule,

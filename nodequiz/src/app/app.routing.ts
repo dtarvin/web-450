@@ -16,6 +16,7 @@ import { AuthLayoutComponent } from './shared/auth-layout/auth-layout.component'
 import { CumulativeSummaryComponent } from './pages/cumulative-summary/cumulative-summary.component';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { PresentationComponent } from './pages/presentation/presentation.component';
 
 export const AppRoutes: Routes = [
   {
@@ -30,6 +31,11 @@ export const AppRoutes: Routes = [
       {
         path: 'cumulative-summary',
         component: CumulativeSummaryComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'presentation/:name',
+        component: PresentationComponent,
         canActivate: [AuthGuard]
       }
     ]
