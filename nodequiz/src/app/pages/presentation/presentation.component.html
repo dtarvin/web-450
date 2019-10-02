@@ -3,10 +3,16 @@
 
 <div fxLayout="column">
   <mat-card>
-    <mata-card-title>{{ presentationName }}</mata-card-title>
+    <mat-card-title>{{ presentationName }}</mat-card-title>
     <mat-card-content>
-      <p-carousel [value]="{{ presentationName }}" numVisible="1">
-
+      <p-carousel [value]="presentation" numVisible="1">
+        <ng-template let-item pTemplate="item">
+          <div fxLayout="column" fxLayoutAlign="center center">
+            <div fxFlex>
+              <img *ngIf="" src="./assets/presentations/rest-and-the-web/{{item.name}}.jpeg" alt="">
+            </div>
+          </div>
+        </ng-template>
       </p-carousel>
     </mat-card-content>
   </mat-card>
