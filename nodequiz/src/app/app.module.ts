@@ -39,7 +39,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { CarouselModule } from 'primeng/carousel';
 import { PresentationComponent } from './pages/presentation/presentation.component';
+import { PresentationService } from './pages/presentation/presentation.service';
 
 
 
@@ -69,10 +71,11 @@ import { PresentationComponent } from './pages/presentation/presentation.compone
     MatSidenavModule,
     MatListModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},
-              AuthGuard, CookieService],
+              AuthGuard, CookieService, PresentationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

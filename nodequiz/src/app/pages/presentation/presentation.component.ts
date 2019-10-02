@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { PresentationService } from './presentation.service';
 
 @Component({
   selector: 'app-presentation',
@@ -9,11 +11,17 @@ import { ActivatedRoute } from '@angular/router';
 export class PresentationComponent implements OnInit {
 
   presentationName: string;
-  images: any[];
+  slides: any[];
 
-  constructor(private route: ActivatedRoute) { 
-    this.presentationName = route.snapshot.params.name;
+  constructor(private route: ActivatedRoute, private http: HttpClient,
+              private presentationService: PresentationService) {
+    this.presentationName = route.snapshot.paramMap.get('name');
+    this.presentationService.getPresentations()
+        .subscribe(data => {
+
+        })
   }
+
 
   ngOnInit() {
   }

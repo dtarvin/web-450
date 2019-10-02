@@ -1,2 +1,13 @@
 <p>presentation works!</p>
 <p>The presentation name is {{ presentationName }}.</p>
+
+<div fxLayout="column">
+  <mat-card>
+    <mata-card-title>{{ presentationName }}</mata-card-title>
+    <mat-card-content>
+      <p-carousel [value]="{{ presentationName }}" numVisible="1">
+
+      </p-carousel>
+    </mat-card-content>
+  </mat-card>
+</div>
