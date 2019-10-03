@@ -1,7 +1,7 @@
 [
   {
     "name": "rest-and-the-web",
-    "image": [
+    "images": [
       { "name": "Slide1"},
       { "name": "Slide2"},
       { "name": "Slide3"},
@@ -21,7 +21,7 @@
   },
   {
     "name": "technology-value-stream",
-    "image": [
+    "images": [
       { "name": "Slide1"},
       { "name": "Slide2"},
       { "name": "Slide3"},
@@ -39,7 +39,7 @@
   },
   {
     "name": "UI-Designer-and-Waterfall",
-    "image": [
+    "images": [
       { "name": "Slide1"},
       { "name": "Slide2"},
       { "name": "Slide3"},

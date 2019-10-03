@@ -3,38 +3,30 @@ import { Injectable } from '@angular/core';
 import { filter, map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
-export interface Presentation {
-  name: string;
-  image: string[];
-}
-
 @Injectable({
   providedIn: 'root'
 })
 export class PresentationService {
 
+
   // presentation: Presentation[];
   presentationName: string;
-  presentations;
+  presentations: any;
+  images: any;
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient) {
     // http.get('./assets/presentations')
     // .pipe(map(data => {}))
     // .subscribe(data => this.presentations = data);
   }
-  
+
   // getPresentation(presentationName) {
   //   const presentation = this.presentations.filter(p => p.name === this.presentationName);
   //   return presentation.image;
   // }
 
-  getPresentation(presentationName) {
-    this.http.get('./assets/presentations.json')
-    .subscribe(res => {
-      this.presentations = res;
-      this.presentations.filter(p => this.presentations.name === this.presentationName);  
-      return this.presentations.image.name;
-    })   
+  getPresentations() {
+    return this.http.get('./assets/presentations.json');
   }
 
   // getPresentation(presentationName: string): Observable<Presentation[]> {
