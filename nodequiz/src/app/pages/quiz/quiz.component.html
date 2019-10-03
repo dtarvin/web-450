@@ -1,0 +1,19 @@
+<div fxLayout="column">
+    <mat-card class="mainCardColor">
+      <mat-card-title>REST and the Web</mat-card-title>
+      <mat-card-content>
+        <p-carousel [value]="questions" numVisible="1">
+          <ng-template let-item pTemplate="item">
+            <div fxLayout="column" fxLayoutAlign="center center">
+              <div fxFlex>
+                <!-- <img src="./assets/presentations/{{ presentationName }}/{{ item.name }}.jpeg" alt=""> -->
+              </div>
+            </div>
+          </ng-template>
+        </p-carousel>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button type="submit">Take Quiz</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>

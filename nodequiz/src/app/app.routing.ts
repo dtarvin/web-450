@@ -17,6 +17,7 @@ import { CumulativeSummaryComponent } from './pages/cumulative-summary/cumulativ
 import { AuthGuard } from './shared/guards/auth.guard';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { PresentationComponent } from './pages/presentation/presentation.component';
+import { QuizComponent } from './pages/quiz/quiz.component';
 
 export const AppRoutes: Routes = [
   {
@@ -36,6 +37,11 @@ export const AppRoutes: Routes = [
       {
         path: 'presentation/:name',
         component: PresentationComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'quiz/:id',
+        component: QuizComponent,
         canActivate: [AuthGuard]
       }
     ]

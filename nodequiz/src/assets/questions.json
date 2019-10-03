@@ -1,0 +1,23 @@
+[
+    {
+        "quizId": 1,
+        "questions": [
+            {
+                "questionNumber": 1,
+                "questionText": "What is the state of a computer?",
+                "answers": [
+                    {
+                        "answerLetter": "A",
+                        "answerText": "The condition of the computer regarding its current values and contents",
+                        "isCorrect": true
+                    },
+                    {
+                        "answerLetter": "B",
+                        "answerText": "The value of a resource at any given time",
+                        "isCorrect": false
+                    }
+                ]
+            }
+        ]
+    }
+]

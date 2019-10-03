@@ -42,6 +42,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { CarouselModule } from 'primeng/carousel';
 import { PresentationComponent } from './pages/presentation/presentation.component';
 import { PresentationService } from './pages/presentation/presentation.service';
+import { QuizComponent } from './pages/quiz/quiz.component';
 
 
 
@@ -54,7 +55,8 @@ import { PresentationService } from './pages/presentation/presentation.service';
     LoginComponent,
     NotFoundComponent,
     AuthLayoutComponent,
-    PresentationComponent
+    PresentationComponent,
+    QuizComponent
   ],
   imports: [
     BrowserModule,

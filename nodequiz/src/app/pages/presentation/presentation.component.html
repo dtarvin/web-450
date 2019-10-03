@@ -1,5 +1,5 @@
 <div fxLayout="column" *ngIf="images">
-  <mat-card>
+  <mat-card class="mainCardColor">
     <mat-card-title>{{ presentationName }}</mat-card-title>
     <mat-card-content>
       <p-carousel [value]="images" numVisible="1">
@@ -12,5 +12,8 @@
         </ng-template>
       </p-carousel>
     </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button type="submit" (click)="goToQuiz">Take Quiz</button>
+    </mat-card-actions>
   </mat-card>
 </div>

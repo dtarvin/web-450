@@ -84,6 +84,18 @@ app.get('/api/users/:id', function(req, res, next) {
     }
   })
 })
+
+app.get('api/quizzes/:id', function(req, res, next) {
+  Quiz.findOne({'quizId':req.params.id}, function(err, quizzes) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(quizzes);
+      res.json(quizzes);
+    }
+  })
+})
 /**
  * Creates an express server and listens on port 3000
  */
