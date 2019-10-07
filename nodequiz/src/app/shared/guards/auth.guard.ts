@@ -1,3 +1,12 @@
+/*
+; ============================================
+; Title:  auth.guard.ts
+; Author: David Tarvin
+; Date:   7 Oct 2019
+; Description: NodeQuiz
+;=============================================
+*/
+
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';

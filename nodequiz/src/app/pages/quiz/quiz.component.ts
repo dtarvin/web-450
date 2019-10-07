@@ -1,3 +1,12 @@
+/*
+; ============================================
+; Title:  quiz.component.ts
+; Author: David Tarvin
+; Date:   7 Oct 2019
+; Description: NodeQuiz
+;=============================================
+*/
+
 import { filter } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';

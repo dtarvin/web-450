@@ -1,3 +1,12 @@
+/*
+; ============================================
+; Title:  presentation.component.ts
+; Author: David Tarvin
+; Date:   7 Oct 2019
+; Description: NodeQuiz
+;=============================================
+*/
+
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
