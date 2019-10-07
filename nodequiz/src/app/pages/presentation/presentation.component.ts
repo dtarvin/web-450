@@ -1,9 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PresentationService } from './presentation.service';
-import { filter, map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-presentation',
@@ -14,9 +12,11 @@ export class PresentationComponent implements OnInit {
   images: any;
   presentations: any;
   presentationName: string;
+  quizName: string;
 
   constructor(private route: ActivatedRoute, private http: HttpClient,
-              private presentationService: PresentationService) {
+              private presentationService: PresentationService,
+              private router: Router) {
     this.presentationName = route.snapshot.paramMap.get('name');
     this.presentationService.getPresentations()
     .subscribe(res => {
@@ -27,6 +27,11 @@ export class PresentationComponent implements OnInit {
     })
   }
 
+  goToQuiz(quizName) {
+    this.quizName = quizName;
+    console.log('The quiz name is ' + this.quizName);
+    this.router.navigate(['/dashboard/quizzes/' + this.quizName]);
+  }
 
   ngOnInit() {
 

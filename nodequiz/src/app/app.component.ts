@@ -34,4 +34,7 @@ export class AppComponent {
     this.cookieService.delete("isAuthenticated");
     this.router.navigate(['/session/login']);
   }
+  goToDashboard() {
+    this.router.navigate(['/dashboard/']);
+  }
  }

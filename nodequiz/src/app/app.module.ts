@@ -43,7 +43,7 @@ import { CarouselModule } from 'primeng/carousel';
 import { PresentationComponent } from './pages/presentation/presentation.component';
 import { PresentationService } from './pages/presentation/presentation.service';
 import { QuizComponent } from './pages/quiz/quiz.component';
-
+import { QuizService } from './pages/quiz/quiz.service';
 
 
 @NgModule({
@@ -77,7 +77,7 @@ import { QuizComponent } from './pages/quiz/quiz.component';
     CarouselModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},
-              AuthGuard, CookieService, PresentationService],
+              AuthGuard, CookieService, PresentationService, QuizService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

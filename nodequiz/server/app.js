@@ -15,6 +15,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const mongoose = require('mongoose');
 const User = require('./models/user');
+const Quiz = require('./models/quiz');
 const config = require('./helpers/config');
 
 let app = express();
@@ -85,8 +86,20 @@ app.get('/api/users/:id', function(req, res, next) {
   })
 })
 
-app.get('api/quizzes/:id', function(req, res, next) {
-  Quiz.findOne({'quizId':req.params.id}, function(err, quizzes) {
+app.get('/api/quizzes', function(req, res, next) {
+  Quiz.find({}, function(err, quizzes) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(quizzes);
+      res.json(quizzes);
+    }
+  })
+})
+
+app.get('api/quizzes/:name', function(req, res, next) {
+  Quiz.findOne({'quizName':req.params.name}, function(err, quizzes) {
     if (err) {
       console.log(err);
       return next(err);
