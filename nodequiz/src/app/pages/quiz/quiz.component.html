@@ -1,28 +1,25 @@
-<div fxLayout="column">
-    <mat-card class="mainCardColor">
-      <mat-card-title>{{ quizName }}</mat-card-title>
-      <mat-card-content>
-        <p-carousel [value]="questions" numVisible="1">
-          <ng-template let-item pTemplate="item">
-            <div fxLayout="column" fxLayoutAlign="center center">
-              <div fxFlex>
-                <p>{{ item.questionNumber }}.  {{ item.questionText }}</p>
-                <ul>
-                  <li>{{ item.answers[0].answerLetter }}.  {{ item.answers[0].answerText }}</li>
-                  <li>{{ item.answers[1].answerLetter }}.  {{ item.answers[1].answerText }}</li>
-                  <li>{{ item.answers[2].answerLetter }}.  {{ item.answers[2].answerText }}</li>
-                  <li>{{ item.answers[3].answerLetter }}.  {{ item.answers[3].answerText }}</li>
-                </ul>
-              </div>
-            </div>
-            <mat-card-actions>
-              <button mat-raised-button type="submit">Submit Answer</button>
-            </mat-card-actions>
-            <mat-card-actions>
-              <button mat-raised-button type="submit" (click)="returnToPresentation(quizName)">Back to Presentation</button>
-            </mat-card-actions>
-          </ng-template>
-        </p-carousel>
-      </mat-card-content>
-    </mat-card>
+<div class="container">
+  <!-- <small *ngIf="errorMessage">{{ errorMessage }}</small> -->
+  <div *ngIf="questions">
+    <h1 class="alignCenter">{{ quizName }}</h1>
+    <div *ngFor="let item of questions; index as i">
+      <mat-card class="mat-elevation-z8 colorGrey">
+        <mat-card-title>Question {{ i + 1 }} - {{ item.questionText }}</mat-card-title>
+        <mat-card-content>
+          <div class="answerBank">
+            <mat-radio-group name="quizAnswers" (change)="radioChange($event)" aria-label="Select an option">
+              <mat-radio-button value="A">{{ item.answers[0].answerLetter }}. {{ item.answers[0].answerText }}</mat-radio-button><br />
+              <mat-radio-button value="B">{{ item.answers[1].answerLetter }}. {{ item.answers[1].answerText }}</mat-radio-button><br />
+              <mat-radio-button value="C">{{ item.answers[2].answerLetter }}. {{ item.answers[2].answerText }}</mat-radio-button><br />
+              <mat-radio-button value="D">{{ item.answers[3].answerLetter }}. {{ item.answers[3].answerText }}</mat-radio-button><br />
+            </mat-radio-group>
+          </div>
+        </mat-card-content>
+      </mat-card>
+      <br /><br />
+    </div>
+    <button mat-raised-button color="primary" routerLink="/presentation/{{ quizSelection }}">
+      Return to Presentation
+    </button>
   </div>
+</div>

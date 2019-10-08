@@ -38,6 +38,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatRadioModule } from '@angular/material/radio';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CarouselModule } from 'primeng/carousel';
 import { PresentationComponent } from './pages/presentation/presentation.component';
@@ -72,6 +73,7 @@ import { QuizService } from './pages/quiz/quiz.service';
     MatMenuModule,
     MatSidenavModule,
     MatListModule,
+    MatRadioModule,
     FlexLayoutModule,
     HttpClientModule,
     CarouselModule

@@ -50,6 +50,10 @@ export class QuizComponent implements OnInit {
     this.router.navigate(['/dashboard/presentation/' + this.quizName]);
   }
 
+  radioChange(value) {
+    console.log(" Value is " + value );
+  }
+
   ngOnInit() {
 
   }
