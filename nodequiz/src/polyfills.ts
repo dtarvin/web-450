@@ -1,3 +1,13 @@
+/*
+; ============================================
+; Title:  polyfills.ts
+; Author: Richard Krasso
+; Modified By: David Tarvin
+; Date:   7 Oct 2019
+; Description: NodeQuiz
+;=============================================
+*/
+
 /**
  * This file includes polyfills needed by Angular and is loaded before the app.
  * You can add your own extra polyfills to this file.

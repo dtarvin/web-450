@@ -1,3 +1,13 @@
+/*
+; ============================================
+; Title:  protractor.conf.js
+; Author: Richard Krasso
+; Modified By: David Tarvin
+; Date:   7 Oct 2019
+; Description: NodeQuiz
+;=============================================
+*/
+
 // @ts-check
 // Protractor configuration file, see link for more information
 // https://github.com/angular/protractor/blob/master/lib/config.ts

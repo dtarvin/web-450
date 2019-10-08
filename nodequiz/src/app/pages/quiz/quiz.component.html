@@ -8,17 +8,17 @@
         <mat-card-content>
           <div class="answerBank">
             <mat-radio-group name="quizAnswers" (change)="radioChange($event)" aria-label="Select an option">
-              <mat-radio-button value="A">{{ item.answers[0].answerLetter }}. {{ item.answers[0].answerText }}</mat-radio-button><br />
-              <mat-radio-button value="B">{{ item.answers[1].answerLetter }}. {{ item.answers[1].answerText }}</mat-radio-button><br />
-              <mat-radio-button value="C">{{ item.answers[2].answerLetter }}. {{ item.answers[2].answerText }}</mat-radio-button><br />
-              <mat-radio-button value="D">{{ item.answers[3].answerLetter }}. {{ item.answers[3].answerText }}</mat-radio-button><br />
+              <mat-radio-button value="{{ item.answers[0].answerLetter }}">{{ item.answers[0].answerLetter }}. {{ item.answers[0].answerText }}</mat-radio-button><br />
+              <mat-radio-button value="{{ item.answers[1].answerLetter }}">{{ item.answers[1].answerLetter }}. {{ item.answers[1].answerText }}</mat-radio-button><br />
+              <mat-radio-button value="{{ item.answers[2].answerLetter }}">{{ item.answers[2].answerLetter }}. {{ item.answers[2].answerText }}</mat-radio-button><br />
+              <mat-radio-button value="{{ item.answers[3].answerLetter }}">{{ item.answers[3].answerLetter }}. {{ item.answers[3].answerText }}</mat-radio-button><br />
             </mat-radio-group>
           </div>
         </mat-card-content>
       </mat-card>
       <br /><br />
     </div>
-    <button mat-raised-button color="primary" routerLink="/presentation/{{ quizSelection }}">
+    <button mat-raised-button color="primary" routerLink="/dashboard/presentation/{{ quizName }}">
       Return to Presentation
     </button>
   </div>

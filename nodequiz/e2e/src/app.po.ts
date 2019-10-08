@@ -1,3 +1,13 @@
+/*
+; ============================================
+; Title:  app.po.ts
+; Author: Richard Krasso
+; Modified By: David Tarvin
+; Date:   7 Oct 2019
+; Description: NodeQuiz
+;=============================================
+*/
+
 import { browser, by, element } from 'protractor';
 
 export class AppPage {

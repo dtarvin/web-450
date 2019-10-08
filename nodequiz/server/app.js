@@ -109,6 +109,24 @@ app.get('api/quizzes/:name', function(req, res, next) {
     }
   })
 })
+
+// app.post("/process", function(request, response) {
+//   // console.log(request.body.txtName);
+//   if(!request.body.employeeId || !request.body.name) {
+//     response.status(400).send("Entries must have an employeeId and a quiz name");
+//     return;
+//   }
+
+//   const quizId = request.body.quizId;
+//   const name = request.body.name;
+
+//   const newEmployee = new Employee({ firstName, lastName });
+//   newEmployee.save(function(error) {
+//     if (error) throw error;
+//     console.log(firstName + ' ' + lastName + ' saved successfully!');
+//   });
+//   response.redirect("/");
+// });
 /**
  * Creates an express server and listens on port 3000
  */
