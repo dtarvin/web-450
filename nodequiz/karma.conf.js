@@ -1,3 +1,13 @@
+/*
+; ============================================
+; Title:  karma.conf.js
+; Author: Richard Krasso
+; Modified By: David Tarvin
+; Date:   7 Oct 2019
+; Description: NodeQuiz
+;=============================================
+*/
+
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 

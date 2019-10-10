@@ -1,3 +1,13 @@
+/*
+; ============================================
+; Title:  app.e2e-spec.ts
+; Author: Richard Krasso
+; Modified By: David Tarvin
+; Date:   7 Oct 2019
+; Description: NodeQuiz
+;=============================================
+*/
+
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
 
