@@ -1,7 +1,11 @@
-ul {
+/* ul {
   list-style-type: none;
 }
 
 .answerBank {
   width: 80%;
+} */
+
+input[type="radio"] {
+  vertical-align: top;
 }
