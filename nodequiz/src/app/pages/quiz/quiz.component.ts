@@ -7,12 +7,13 @@
 ;=============================================
 */
 
-import { CookieService } from 'ngx-cookie-service';
+import { filter } from 'rxjs/operators';
+// import { CookieService } from 'ngx-cookie-service';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { QuizService } from './quiz.service';
-import { MatDialog } from '@angular/material/dialog';
+// import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-quiz',
@@ -24,24 +25,26 @@ export class QuizComponent implements OnInit {
   quizName: string;
   quizzes: any;
   quiz: any;
-  questions: any = [];
-  question: any = [];
+  questions: any;
+  // question: any;
 
-  quizId: number;
-  employeeId: number;
-  quizResults: any;
+  // quizId: number;
+  // employeeId: number;
+  // quizResults: any;
 
-  constructor(private route: ActivatedRoute, private http: HttpClient, private cookieService: CookieService, private dialog: MatDialog,
-    private quizService: QuizService, private router: Router) {
+  constructor(private route: ActivatedRoute, private http: HttpClient,
+    private quizService: QuizService,
+    private router: Router) {
       this.quizName = route.snapshot.paramMap.get('name');
+      console.log('The quiz name is ', this.quizName);
       // this.quizId = parseInt(this.route.snapshot.paramMap.get('quizId'), 10);
-      this.employeeId = parseInt(this.cookieService.get('employeeId'), 10);
+      // this.employeeId = parseInt(this.cookieService.get('employeeId'), 10);
       console.log('Running getQuizzes from component');
       this.quizService.getQuizzes()
       .subscribe(res => {
         this.quizzes = res;
-        console.log(this.quizzes);
-        this.questions = this.quizzes.filter(p => p.name === this.quizName)[0].questions;
+        console.log('The quizzes are as follows:', this.quizzes);
+        this.questions = this.quizzes.filter(q => q.name === this.quizName)[0].questions;
         // this.quiz = this.quizzes.filter(q => q.quizId === this.quizId)[0];
         console.log(this.questions);
       })
@@ -58,10 +61,13 @@ export class QuizComponent implements OnInit {
     this.router.navigate(['/dashboard/presentation/' + this.quizName]);
   }
 
-  onSubmit(form) {
-    this.quizResults = form;
-    this.quizResults['employeeId'] = this.employeeId; // add the employeeId to the quizResults object
-    this.quizResults['quizId'] = this.quizId; // add the quizId to the quizResults object
+  radioChange(value) {
+    console.log(" Value is " + value);
+  }
+  // onSubmit(form) {
+  //   this.quizResults = form;
+  //   this.quizResults['employeeId'] = this.employeeId; // add the employeeId to the quizResults object
+  //   this.quizResults['quizId'] = this.quizId; // add the quizId to the quizResults object
 
     // const dialogRef = this.dialog.open(QuizResultDialogComponent, {
     //   data: {
@@ -76,7 +82,7 @@ export class QuizComponent implements OnInit {
     //     console.log(this.quizResults);
     //   }
     // });
-  }
+  // }
 
   ngOnInit() {
 

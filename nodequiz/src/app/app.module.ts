@@ -12,7 +12,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule} from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
@@ -39,7 +39,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatRadioModule } from '@angular/material/radio';
-import { MatDialogModule } from '@angular/material/dialog';
+// import { MatDialogModule } from '@angular/material/dialog';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CarouselModule } from 'primeng/carousel';
 import { PresentationComponent } from './pages/presentation/presentation.component';
@@ -65,6 +65,7 @@ import { QuizService } from './pages/quiz/quiz.service';
     BrowserAnimationsModule,
     RouterModule.forRoot(AppRoutes, { useHash: true, enableTracing: false }),
     ReactiveFormsModule,
+    FormsModule,
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
@@ -75,7 +76,7 @@ import { QuizService } from './pages/quiz/quiz.service';
     MatSidenavModule,
     MatListModule,
     MatRadioModule,
-    MatDialogModule,
+    // MatDialogModule,
     FlexLayoutModule,
     HttpClientModule,
     CarouselModule

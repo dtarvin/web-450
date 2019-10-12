@@ -22,7 +22,7 @@ quizName: string;
 
   getQuizzes() {
     console.log('Running getQuizzes from Service');
-    return this.http.get('/assets/questions.json');
+    return this.http.get('/api/quizzes');
   }
 
 }
