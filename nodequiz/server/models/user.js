@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
-  employeeId: { type: Number, required: true },
+  employeeId: { type: String, required: true },
   firstName: { type: String },
   lastName: { type: String },
   runningAverage: { type: Number }

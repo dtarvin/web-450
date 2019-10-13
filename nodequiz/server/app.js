@@ -110,6 +110,17 @@ app.get('api/quizzes/:name', function(req, res, next) {
   })
 })
 
+// app.get('/api/quizzes/:id', function(req, res, next) {
+//   Quiz.findOne({'quizId': req.params.id}, function(err, quiz) {
+//     if (err) {
+//       console.log(err);
+//       return next(err);
+//     }  else {
+//       console.log(quiz);
+//       res.json(quiz);
+//     }
+//   })
+// });
 // app.post("/process", function(request, response) {
 //   // console.log(request.body.txtName);
 //   if(!request.body.employeeId || !request.body.name) {
@@ -119,6 +130,47 @@ app.get('api/quizzes/:name', function(req, res, next) {
 
 //   const quizId = request.body.quizId;
 //   const name = request.body.name;
+
+// Quiz.create(quiz, function(err, quizzes) {
+//   if (err) {
+//     console.log(err);
+//     return next(err);
+//   } else {
+//     console.log(quizzes);
+//     res.json(quizzes);
+//   }
+// })
+
+/*************** Quiz Results API *******************************************/
+
+//Create Quiz Result
+// app.post('/api/results', function(req, res, next) {
+//   const result = {
+//     employeeId: req.body.employeeId,
+//     quizId: req.body.quizId,
+//     q1: req.body.q1,
+//     q2: req.body.q2,
+//     q3: req.body.q3,
+//     q4: req.body.q4,
+//     q5: req.body.q5,
+//     q6: req.body.q6,
+//     q7: req.body.q7,
+//     q8: req.body.q8,
+//     q9: req.body.q9,
+//     q10: req.body.q10
+//   };
+
+//   Result.create(result, function(err, results) {
+//     if (err) {
+//       console.log(err);
+//       return next(err);
+//     } else {
+//       console.log(results);
+//       res.json(results);
+//     }
+//   });
+// });
+
 
 //   const newEmployee = new Employee({ firstName, lastName });
 //   newEmployee.save(function(error) {

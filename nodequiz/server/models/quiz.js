@@ -12,7 +12,7 @@ const Schema = mongoose.Schema;
 
 const QuizSchema = new Schema({
     quizId: {type: Number},
-    name: {type: String, required: true},
+    name: {type: String},
     questions: [{
         questionNumber: {type: Number},
         questionText: {type: String},
