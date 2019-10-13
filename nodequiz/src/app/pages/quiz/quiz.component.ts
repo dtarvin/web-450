@@ -26,6 +26,8 @@ export class QuizComponent implements OnInit {
   quizzes: any;
   quiz: any;
   questions: any;
+  q: any;
+  qs: any;
   // question: any;
 
   // quizId: number;
