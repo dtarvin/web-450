@@ -1,11 +1,12 @@
-<div>
-  <mat-card>
+<div style="width: 50%; margin-top: 2%; margin-left: 20%;" fxLayout="column">
+  <mat-card class="mat-elevation-z8">
     <mat-card-title style="text-align: center; font-weight: lighter;" class="mat-headline">
       {{ quizName }}
     </mat-card-title>
-    <!-- <mat-card-subtitle style="text-align: center; font-weight: lighter;">
-      {{ quiz.description }}
-    </mat-card-subtitle> -->
+      <div *ngIf="isShown == true">
+        <h1>Results</h1>
+        <p *ngIf="quizResults">{{ displayResults }}</p>
+      </div>
     <br>
     <!-- root mat card content -->
     <mat-card-content *ngIf="questions">
@@ -13,7 +14,7 @@
       <div fxLayout="column">
 
         <!-- Quiz form -->
-        <form #quizForm="ngForm" (ngSubmit)="onSubmit(quizForm.value); quizForm.reset();">
+        <form #quizForm="ngForm" *ngIf="isShown == false" (ngSubmit)="onSubmit(quizForm.value); quizForm.reset();">
           <div *ngFor="let question of questions">
             <mat-card class="mat-elevation-z8">
               <mat-card-content>
@@ -33,7 +34,7 @@
                     <label>Answers:</label>
                     <div fxLayout="column" fxLayoutGap="10px">
                       <div *ngFor="let answer of question.answers" style="flex-direction: column;">
-                        <input [(ngModel)]="qs[question.questionNumber-1]" [checked]="qs[question.questionNumber-1]" value="{{question.questionNumer}};{{answer.answerId}};{{answer.isCorrect}}" name="q{{question.questionNumber}}" type="radio" />
+                        <input [(ngModel)]="qs[question.questionNumber]" [checked]="qs[question.questionNumber]" value="{{question.questionNumer}};{{answer.answerText}};{{answer.isCorrect}}" name="q{{question.questionNumber}}" type="radio" />
                           {{answer.answerText}}
                       </div>
                     </div>
@@ -59,7 +60,7 @@
   <!-- end root mat card -->
 
   <br><br><br>
-  <!-- <div fxFlex fxLayoutAlign="end" style="width: 50%; margin: 0 auto;">
+  <div fxFlex fxLayoutAlign="end" style="width: 50%; margin: 0 auto;">
     <button mat-button color="primary" (click)="goBack()">Return to Presentation</button>
-  </div> -->
+  </div>
 </div>

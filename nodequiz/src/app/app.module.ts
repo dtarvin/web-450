@@ -39,13 +39,15 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatRadioModule } from '@angular/material/radio';
-// import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CarouselModule } from 'primeng/carousel';
 import { PresentationComponent } from './pages/presentation/presentation.component';
 import { PresentationService } from './pages/presentation/presentation.service';
 import { QuizComponent } from './pages/quiz/quiz.component';
 import { QuizService } from './pages/quiz/quiz.service';
+import { QuizSummaryDialogComponent } from './shared/quiz-summary-dialog/quiz-summary-dialog.component';
+import { QuizResultDialogComponent } from './shared/quiz-result-dialog/quiz-result-dialog.component';
 
 
 @NgModule({
@@ -58,7 +60,9 @@ import { QuizService } from './pages/quiz/quiz.service';
     NotFoundComponent,
     AuthLayoutComponent,
     PresentationComponent,
-    QuizComponent
+    QuizComponent,
+    QuizSummaryDialogComponent,
+    QuizResultDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +80,7 @@ import { QuizService } from './pages/quiz/quiz.service';
     MatSidenavModule,
     MatListModule,
     MatRadioModule,
-    // MatDialogModule,
+    MatDialogModule,
     FlexLayoutModule,
     HttpClientModule,
     CarouselModule
