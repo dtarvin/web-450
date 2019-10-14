@@ -1,4 +1,13 @@
 import { CookieService } from 'ngx-cookie-service';
+/*
+; ============================================
+; Title:  quiz-result-dialog.component.ts
+; Author: David Tarvin
+; Date:   13 Oct 2019
+; Description: NodeQuiz
+;=============================================
+*/
+
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 

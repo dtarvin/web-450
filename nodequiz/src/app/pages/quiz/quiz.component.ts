@@ -105,7 +105,7 @@ export class QuizComponent implements OnInit {
     /**
      * 1. TODO: Save the quiz results to the database here...
      */
-    this.http.post('/api/quiz/' + this.quizName + '/quiz-results', body {
+    this.http.post('/api/quiz/' + this.quizName + '/quiz-results', {
       employeeId: this.employeeId,
       quizName: this.quizName,
       result: JSON.stringify(form)
