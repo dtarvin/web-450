@@ -46,9 +46,7 @@ import { PresentationComponent } from './pages/presentation/presentation.compone
 import { PresentationService } from './pages/presentation/presentation.service';
 import { QuizComponent } from './pages/quiz/quiz.component';
 import { QuizService } from './pages/quiz/quiz.service';
-import { QuizSummaryDialogComponent } from './shared/quiz-summary-dialog/quiz-summary-dialog.component';
-import { QuizResultDialogComponent } from './shared/quiz-result-dialog/quiz-result-dialog.component';
-
+import { QuizResultsComponent } from './pages/quiz-results/quiz-results.component';
 
 @NgModule({
   declarations: [
@@ -61,8 +59,7 @@ import { QuizResultDialogComponent } from './shared/quiz-result-dialog/quiz-resu
     AuthLayoutComponent,
     PresentationComponent,
     QuizComponent,
-    QuizSummaryDialogComponent,
-    QuizResultDialogComponent
+    QuizResultsComponent
   ],
   imports: [
     BrowserModule,
