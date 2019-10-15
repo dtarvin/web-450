@@ -75,46 +75,46 @@ export class QuizComponent implements OnInit {
   }
 
   onSubmit(form) {
-    this.quizResults = form;
-    this.displayResults = JSON.stringify(this.quizResults);
-    this.show();
-  }
+  //   this.quizResults = form;
+  //   this.displayResults = JSON.stringify(this.quizResults);
+  //   this.show();
+  // }
     /**
      * Variables for setting up our scoring calculation
      */
-    // const totalPossiblePoints = 100; // the total number of possible points a user can earn on a given test
-    // const questionCount = this.quiz.questions.length; // the total number of quiz questions
-    // let pointsPerQuestion = totalPossiblePoints / questionCount; // the total number of poiints per question
-    // let quizScore = 0; // variable to hold the quiz score
+    const totalPossiblePoints = 100; // the total number of possible points a user can earn on a given test
+    const questionCount = this.quiz.questions.length; // the total number of quiz questions
+    let pointsPerQuestion = totalPossiblePoints / questionCount; // the total number of poiints per question
+    let quizScore = 0; // variable to hold the quiz score
 
     /**
      * Variables for determining the user's selection
      */
-    // let correctRunningTotal = 0; // variable to hold the running total of correct answers
-    // let selectedAnswerIds = [];
-    // let selectedIsCorrectProp = [];
+    let correctRunningTotal = 0; // variable to hold the running total of correct answers
+    let selectedAnswerIds = [];
+    let selectedIsCorrectProp = [];
 
     /**
      * Form data
      */
-    // this.quizResults = form;
-    // this.quizResults['employeeId'] = this.employeeId; // add the employeeId to the quizResults object
-    // this.quizResults['quizName'] = this.quizName; // add the quizName to the quizResults object
+    this.quizResults = form;
+    this.quizResults['employeeId'] = this.employeeId; // add the employeeId to the quizResults object
+    this.quizResults['quizName'] = this.quizName; // add the quizName to the quizResults object
 
     /**
      * 1. TODO: Save the quiz results to the database here...
      */
-    // this.http.post('/api/quiz/' + this.quizName + '/quiz-results', {
-    //   employeeId: this.employeeId,
-    //   quizName: this.quizName,
-    //   result: JSON.stringify(form)
-    // }).subscribe(res => {
+    this.http.post('/api/quiz/' + this.quizName + '/quiz-results', {
+      employeeId: this.employeeId,
+      quizName: this.quizName,
+      result: JSON.stringify(form)
+    }).subscribe(res => {
 
-    // }, err => {
+    }, err => {
 
-    // }, () => {
+    }, () => {
 
-    // })
+    })
 
     /**
      * 2. Loop over the quizResults properties
@@ -223,7 +223,7 @@ export class QuizComponent implements OnInit {
   //       this.router.navigate(['/']);
   //     }
   //   });
-  // }
+  }
 
   ngOnInit() {
 
